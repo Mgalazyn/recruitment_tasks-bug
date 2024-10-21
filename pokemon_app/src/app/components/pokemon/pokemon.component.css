@@ -1,0 +1,100 @@
+/* Main block containing the Pokémon list */
+.pokemon-block {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual Pokémon card styling */
+  .pokemon-list {
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .pokemon-list:hover {
+    transform: scale(1.05); 
+  }
+  
+  /* Styling for the Pokémon name and button */
+  .pokemon-list_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for Pokémon images */
+  .pokemon-list_name img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the button */
+  #btn {
+    background-color: #37bd39;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #2a75bb;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #btn:hover {
+    background-color: #ff9f00;
+  }
+  
+  /* Details section styling */
+  .pokemon-list__name-details {
+    margin-top: 10px;
+  }
+  
+  /* Stat details styling */
+  .pokemon-list__name-details-item {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+  }
+  
+  .pokemon-list__name-details-items-list {
+    margin-bottom: 5px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2a75bb;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .pokemon-block {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pokemon-list {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  

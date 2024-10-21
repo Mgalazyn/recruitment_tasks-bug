@@ -1,0 +1,21 @@
+<h1> Pokemon app</h1>
+<div class="pokemon-block" id="pokemon-block">
+  <div class="pokemon-list" *ngFor="let pokemon of pokemonStats; let i = index">
+    <div class="pokemon-list_name">
+      <img #front src={{pokemon.sprites.front_default}}>
+      <button id="btn" (click)="onClick(i)">{{pokemon.name|
+        titlecase}}</button>
+    </div>
+    <div class="pokemon-list__name-details">
+      <div *ngIf="showDetailsIndex === i" >
+        <div class="pokemon-list__name-details-item">
+          <div class="pokemon-list__name-details-items-list" *ngFor="let element of pokemon.stats">
+            <div class="pokemon-list__name-details-item">
+              {{element.stat.name}} -> {{element.base_stat}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
