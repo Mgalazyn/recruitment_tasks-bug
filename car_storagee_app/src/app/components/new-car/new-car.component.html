@@ -1,0 +1,23 @@
+<button class="new-car_button-add" (click)="toggleFormVisibility()">Add car</button>
+<div *ngIf="isFormVisible" class="car-details" [formGroup]="carForm">
+  <h2 class="car-details__title">Add New Car</h2>
+  <ul class="car-details__info">
+    <ul class="car-details__item">
+      <label class="car-details__label" for="mark">Car's mark:</label>
+      <input class="car-details__input" id="mark" type="text" formControlName="mark" />
+    </ul>
+    <ul class="car-details__item">
+      <label class="car-details__label" for="model">Car's model:</label>
+      <input class="car-details__input" id="model" type="text" formControlName="model" />
+    </ul>
+    <ul class="car-details__item">
+      <label class="car-details__label" for="year">Car's year: </label>
+      <input class="car-details__input" id="year" type="text" formControlName="year" />
+    </ul>
+    <ul class="car-details__item">
+        <label class="car-details__label" for="parts">Parts: </label>
+        <input class="car-details_value_input" id="parts_list" type="text" formControlName="parts" />
+    </ul>
+  </ul>
+  <button class="car-details__button-submit" (click)="onSubmit()">Submit</button>
+</div>

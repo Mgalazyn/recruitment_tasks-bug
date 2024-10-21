@@ -1,0 +1,18 @@
+<div class="car-block">
+    <div class="car-list">
+        <h2 class="car-list__title"> Cars list</h2>
+        <!-- <li *ngFor="let car of cars" class="car-list__items"> -->
+
+            @for (car of cars; track car.id) {
+                <li>
+                    <button [class.selected]="car === selectedCar" type="button" (click)="onSelect(car)">
+                        <span class="car-list__item__name">{{ car.mark }}</span>
+                        <span class="car-list__item__name"> {{ car.model }}</span>
+                    </button> 
+                </li> }
+            
+    </div>
+    <app-car-details [car]="selectedCar" (carUpdate)="updateCarData($event)"></app-car-details>
+</div>
+
+

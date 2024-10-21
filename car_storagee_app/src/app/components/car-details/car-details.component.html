@@ -1,0 +1,25 @@
+<div *ngIf="car" class="car-details" [formGroup]="carForm" >
+    <h2 class="car-details__title"> {{car.mark | uppercase }} {{car.model |uppercase  }}  information </h2>
+        <ul class="car-details__item">
+            <label class="car-details__label" for="name">Car's mark:</label>
+            <input class="car-details__input" id="mark" type="text" formControlName="mark" placeholder="{{ car.mark }}" />
+        </ul>
+        <ul class="car-details__item">
+            <label class="car-details__label" for="model">Car's model:</label>
+            <input class="car-details__input" id="model" type="text" formControlName="model" placeholder="{{ car.model }}" />
+        </ul>
+        <ul class="car-details__item">
+            <label class="car-details__label" for="year">Car's year:</label>
+            <input class="car-details__input" id="year" type="text" formControlName="year" placeholder="{{ car.year }}" />
+        </ul>
+        <ul class="car-details__item">
+            <label class="car-details__label" for="parts">Car's parts:</label>
+            <input class="car-details__input" id="parts" type="text" formControlName="parts"/>
+            <ul class="car-details__parts-list">
+                <li class="car-details__parts-list" *ngFor="let part of car.parts">
+                    {{part}}
+                </li>
+            </ul>
+        </ul>
+    <button class="car-details__button-submit" (click)="sendUpdatedCarDetails()"> Submit</button>
+</div>
